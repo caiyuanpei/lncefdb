@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<definition name="default" template="/WEB-INF/views/template.jsp">
+	</definition>
+
+	<definition name="wide" template="/WEB-INF/views/template-wide.jsp">
+	</definition>
+
+	<definition name="lncef.index" extends="default">
+		<put-attribute name="menu">
+			<definition template="/WEB-INF/views/menu.jsp">
+				<put-attribute name="current" value="1" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/ctt-home.jsp" />
+	</definition>
+	
+	<definition name="lncef.browse" extends="wide">
+		<put-attribute name="menu">
+			<definition template="/WEB-INF/views/menu.jsp">
+				<put-attribute name="current" value="2" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/ctt-browse.jsp" />
+	</definition>
+	
+	<definition name="lncef.search" extends="wide">
+		<put-attribute name="menu">
+			<definition template="/WEB-INF/views/menu.jsp">
+				<put-attribute name="current" value="3" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/ctt-search.jsp" />
+	</definition>
+
+	<definition name="lncef.submit" extends="wide">
+		<put-attribute name="menu">
+			<definition template="/WEB-INF/views/menu.jsp">
+				<put-attribute name="current" value="4" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/ctt-submit.jsp" />
+	</definition>
+
+</tiles-definitions>
