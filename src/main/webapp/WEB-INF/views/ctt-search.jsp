@@ -3,7 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!-- insert the page content here -->
 <h1>Search</h1>
-<p>Search relations by follow conditions:</p>
+<p>Users can search all entries by follow form, detailed information shown in search results:</p>
 <spring:url value="/search" var="URL_DOSEARCH" />
 <form action="${URL_DOSEARCH }" method="post">
   <div class="form_settings">
@@ -44,17 +44,10 @@
 </form>
 <c:if test="${empty search_result }">
 <div style="margin-top: 2em;">
-<p> In the "Search" result, each entry has ten items.</p>
-<p style="text-indent:20px;">(1) miRNA gene - the annotated miRNA gene name based on miRBase Release 17.</p>
-<p style="text-indent:20px;">(2) miRNA product - the annotated miRNA product name based on miRBase Release 17.</p>
-<p style="text-indent:20px;">(3) miRNA product original - the miRNA gene product reported in the original reference.</p>
-<p style="text-indent:20px;">(4) phenotype - the annotated phenotype reported in the original reference.</p>
-<p style="text-indent:20px;">(5) environmental factor (EF) - the annotated environmental factor reported in the original reference.</p>
-<p style="text-indent:20px;">(6) Condition of EF - the condition environmental factor. This item indicates how the environmental factor acts on the experimental objects.</p>
-<p style="text-indent:20px;">(7) Sample - the samples treated by the environmental factor.</p>
-<p style="text-indent:20px;">(8) Species - the species selected in the experiment</p>
-<p style="text-indent:20px;">(9) Evidence - this item indicates the detailed association result among the miRNA, environmental factor, and phenotype. </p>
-<p style="text-indent:20px;">(10) PubMed ID - the reference ID in PubMed database.</p>
+<p> In the "Search" result, each entry has three items.</p>
+<p style="text-indent:20px;">(1) Lnc RNA</p>
+<p style="text-indent:20px;">(2) Environmental factors</p>
+<p style="text-indent:20px;">(3) Status, experiment or predict.</p>
 </div>
 </c:if>
 <c:if test="${not empty search_result }">

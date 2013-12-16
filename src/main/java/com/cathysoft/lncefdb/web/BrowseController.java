@@ -38,7 +38,7 @@ public class BrowseController {
 			@RequestParam(required=false) String id,
 			@RequestParam(required=false) String grp) throws Exception {
 		
-		System.out.println(id+";"+grp);
+		//System.out.println(id+";"+grp);
 		
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");
@@ -60,7 +60,7 @@ public class BrowseController {
 			@RequestParam(required=false) String id,
 			@RequestParam(required=false) String grp) throws Exception {
 		
-		System.out.println(id+";"+grp);
+		//System.out.println(id+";"+grp);
 		
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");
