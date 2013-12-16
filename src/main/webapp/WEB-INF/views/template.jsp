@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Lnc - EF Database</title>
+  <title>LncEnvironmentDB</title>
   <spring:url value="/resources/style/style.css" var="URL_STYLE_CSS" /><link rel="stylesheet" type="text/css" href="${URL_STYLE_CSS }" />
 </head>
 <body>
@@ -14,8 +14,8 @@
       <div id="logo">
         <div id="logo_text">
           <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="index.html">Lnc-Environment<span class="logo_colour">DB</span></a></h1>
-          <h2>A Forecast DB for The Relationship Between Lnc And Environment.</h2>
+          <h1><a href="index.html">LncEnvironment<span class="logo_colour">DB</span></a></h1>
+          <h2>A reference database of putative associations between lncRNA and environmental factors.</h2>
         </div>
       </div>
       <div id="menubar"><tiles:insertAttribute name="menu" /></div>
@@ -32,11 +32,15 @@
         <p></p>
         <h3>Useful Links</h3>
         <ul>
-          <li><a href="#">link 1</a></li>
-          <li><a href="#">link 2</a></li>
-          <li><a href="#">link 3</a></li>
-          <li><a href="#">link 4</a></li>
+          <spring:url value="/resources/logos/ctdlogo_sm.v13237.png" var="LOGO_CTD" />
+          <li><a href="http://ctdbase.org/"><img src="${LOGO_CTD }" alt="http://ctdbase.org/" width="90" height="37" /></a></li>
+          <spring:url value="/resources/logos/starBase.png" var="LOGO_SB" />
+          <li><a href="http://starbase.sysu.edu.cn/"><img src="${LOGO_SB }" alt="http://ctdbase.org/" width="100" height="37" /></a></li>
+          <li><a href="http://202.38.126.151/hmdd/tools/miren.html">miREnvironment</a></li>
+          <li><a href="http://www.drugbank.ca/">DrugBank</a></li>
         </ul>
+        <h3>Contact US</h3>
+        <p>biafomeng@hotmai.com</p>
       </div>
       <div id="content"><tiles:insertAttribute name="content" /></div>
     </div>
