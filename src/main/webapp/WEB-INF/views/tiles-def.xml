@@ -46,5 +46,14 @@
 		</put-attribute>
 		<put-attribute name="content" value="/WEB-INF/views/ctt-submit.jsp" />
 	</definition>
+	
+	<definition name="lncef.download" extends="wide">
+		<put-attribute name="menu">
+			<definition template="/WEB-INF/views/menu.jsp">
+				<put-attribute name="current" value="5" />
+			</definition>
+		</put-attribute>
+		<put-attribute name="content" value="/WEB-INF/views/ctt-download.jsp" />
+	</definition>
 
 </tiles-definitions>
