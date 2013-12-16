@@ -34,6 +34,17 @@ public class SubmitController {
 			@RequestParam String descrip,
 			RedirectAttributes attr) {
 		
+		/* 2013.12.16 update for lnc, ef's server-side validate */
+		if(lnc == null || lnc.trim().length()==0) {
+			attr.addFlashAttribute("substatus", "Lnc RNA must not be empty!");
+			return "redirect:/submit";
+		}
+		if(ef == null || ef.trim().length()==0) {
+			attr.addFlashAttribute("substatus", "Environmental factors must not be empty!");
+			return "redirect:/submit";
+		}
+		/* update end */
+		
 		service.submitTerm(lnc, ef, status, email, descrip);
 		attr.addFlashAttribute("substatus", "Submit Success.");
 		

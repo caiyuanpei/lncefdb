@@ -1,0 +1,28 @@
+lncRNA,Environmental factors,P value (FDR correction),Status,PubMedID
+MIR22HG,cisplatin,,experiment,24036268
+GABPB-AS1,cisplatin,,experiment,24036268
+LINC00152,cisplatin,,experiment,24036268
+IDI2-AS1,cisplatin,,experiment,24036268
+SNHG15,cisplatin,,experiment,24036268
+FLJ33630,cisplatin,,experiment,24036268
+MIR22HG,cycloheximide,,experiment,24036268
+GABPB-AS1,cycloheximide,,experiment,24036268
+LINC00152,cycloheximide,,experiment,24036268
+IDI2-AS1,cycloheximide,,experiment,24036268
+SNHG15,cycloheximide,,experiment,24036268
+FLJ33630,cycloheximide,,experiment,24036268
+MIR22HG,mercury (II) oxide,,experiment,24036268
+GABPB-AS1,mercury (II) oxide,,experiment,24036268
+LINC00152,mercury (II) oxide,,experiment,24036268
+IDI2-AS1,mercury (II) oxide,,experiment,24036268
+SNHG15,mercury (II) oxide,,experiment,24036268
+FLJ33630,mercury (II) oxide,,experiment,24036268
+IGS,heat stress,,experiment,23904269
+IGS,acidosis,,experiment,23904269
+UT6,genotoxic stress,,experiment,22532836
+UT17,genotoxic stress,,experiment,22532836
+UT18,genotoxic stress,,experiment,22532836
+UT32,genotoxic stress,,experiment,22532836
+UT36,genotoxic stress,,experiment,22532836
+UT43,genotoxic stress,,experiment,22532836
+UT46,genotoxic stress,,experiment,22532836
