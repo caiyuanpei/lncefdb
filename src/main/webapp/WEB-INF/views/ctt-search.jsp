@@ -3,7 +3,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!-- insert the page content here -->
 <h1>Search</h1>
-<p>Users can search all entries by follow form, detailed information shown in search results:</p>
+<p>Users can search all entries by follow form, detailed information shown in search results.</p>
+<p>If you want to change predict term to experiment: first, search the term, then, click the link on predict field.</p>
 <spring:url value="/search" var="URL_DOSEARCH" />
 <form action="${URL_DOSEARCH }" method="post">
   <div class="form_settings">
@@ -64,7 +65,17 @@
     <td>${r.lnc }</td>
     <td>${r.ef }</td>
     <td>${r.fdr }</td>
+    <c:if test="${r.status == 'predict' }">
+    
+    <spring:url value="/update" var="URL_UPDATE">
+    	<spring:param name="lnc" value="${r.lnc }" />
+    	<spring:param name="ef" value="${r.ef }" />
+    </spring:url>
+    <td><a href="${URL_UPDATE }">${r.status }</a></td>
+    </c:if>
+    <c:if test="${r.status == 'experiment' }">
     <td>${r.status }</td>
+    </c:if>
   </tr>
   </c:forEach>
 </table>

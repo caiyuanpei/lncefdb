@@ -6,6 +6,8 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class SearchService {
 
+	static Logger logger = LoggerFactory.getLogger(SearchService.class);
+	
 	@Autowired
 	private DataSource dataSource;
 	
@@ -96,7 +100,7 @@ public class SearchService {
 		}
 		
 		String sql = builder.toString();
-		System.out.println("Try Query: " +sql+ "");
+		logger.info("Try Query: " +sql+ "");
 		
 		return tpl.queryForList(sql);
 	}

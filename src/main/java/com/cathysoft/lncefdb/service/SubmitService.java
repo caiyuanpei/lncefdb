@@ -29,4 +29,16 @@ public class SubmitService {
 		
 		return true;
 	}
+	
+	@Transactional
+	@TriggersRemove(cacheName="statistics", removeAll=true)
+	public boolean updateTerm(String lnc, String ef, String status, String pubmedid, String email, String descrip) {
+		JdbcTemplate tpl = new JdbcTemplate(dataSource);
+		
+		/* 2013.12.17 Update For PubMed ID & Submit Time. */
+		tpl.update(
+				"UPDATE fdr SET status=?, pubmedid=?, email=?, descrip=?, fdr=?, submitTime=? WHERE lnc=? AND ef=?",
+				status, pubmedid, email, descrip, "-", new Date(), lnc, ef);
+		return true;
+	}
 }
