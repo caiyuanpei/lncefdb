@@ -7,12 +7,18 @@
 <p>nks in the footer.</p>
 <h2>1. LncRNA list</h2>
   <a style="display: inline-block; margin-right: 1em; cursor: pointer;" href="${URL_D }/lnc/csv">Download CSV</a>
-  <a style="display: inline-block; margin-right: 0em; cursor: pointer;" href="#">Download EXCEL</a>
+  <a style="display: inline-block; margin-right: 0em; cursor: pointer;" href="${URL_D }/lnc/xls">Download EXCEL</a>
 <h2>2. Environmental Factors list</h2>
   <a style="display: inline-block; margin-right: 1em; cursor: pointer;" href="${URL_D }/ef/csv">Download CSV</a>
-  <a style="display: inline-block; margin-right: 0em; cursor: pointer;" href="#">Download EXCEL</a>
+  <a style="display: inline-block; margin-right: 0em; cursor: pointer;" href="${URL_D }/ef/xls">Download EXCEL</a>
 <h2>3. lncRNA-EF fdr table</h2>
-  <a style="display: inline-block; margin-right: 1em; cursor: pointer;" href="${URL_D }/fdr/csv">Download CSV</a>
-  <a style="display: inline-block; margin-right: 1em; cursor: pointer;" href="${URL_D }/fdr/tsv">Download TSV</a>
-  <a style="display: inline-block; margin-right: 0em; cursor: pointer;" href="#">Download EXCEL</a>
-<p>ers:</p>
+<p>Experimentally Supported LncRNAs-EFs:<br />
+  <a style="display: inline-block; margin-right: 1em; cursor: pointer;" href="${URL_D }/experiment/csv">Download CSV</a>
+  <a style="display: inline-block; margin-right: 1em; cursor: pointer;" href="${URL_D }/experiment/tsv">Download TSV</a>
+  <a style="display: inline-block; margin-right: 0em; cursor: pointer;" href="${URL_D }/experiment/xls">Download EXCEL</a>
+</p>
+<p>Predicted LncRNAs-EFs:<br />
+  <a style="display: inline-block; margin-right: 1em; cursor: pointer;" href="${URL_D }/predict/csv">Download CSV</a>
+  <a style="display: inline-block; margin-right: 1em; cursor: pointer;" href="${URL_D }/predict/tsv">Download TSV</a>
+  <a style="display: inline-block; margin-right: 0em; cursor: pointer;" href="${URL_D }/predict/xls">Download EXCEL</a>
+</p>
