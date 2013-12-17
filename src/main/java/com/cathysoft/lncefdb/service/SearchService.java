@@ -9,6 +9,7 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class SearchService {
@@ -16,6 +17,7 @@ public class SearchService {
 	@Autowired
 	private DataSource dataSource;
 	
+	@Transactional
 	public List<Map<String, Object>> search(
 			boolean logic1, String lnc, boolean exact1,
 			boolean logic2, String ef,  boolean exact2,

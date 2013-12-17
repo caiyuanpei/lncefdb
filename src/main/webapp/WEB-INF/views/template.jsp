@@ -26,9 +26,9 @@
       <div class="sidebar">
         <!-- insert your sidebar items here -->
         <h3>Latest News</h3>
-        <h4>New Website Launched</h4>
-        <h5>January 1st, 2010</h5>
-        <p>2010 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <h4>Website Launched</h4>
+        <h5>December 20th, 2013</h5>
+        <p>First Version Of Our Site has been launched. It provided browse, search, submit and download functions.</p>
         <p></p>
         <h3>Useful Links</h3>
         <ul>

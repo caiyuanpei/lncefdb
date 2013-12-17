@@ -5,10 +5,10 @@
 <h2>Statistics</h2>
 <p>(Last statistics at 2013.12.16)</p>
 <ul>
-  <li>Number of LncRNAs: Unknown</li>
-  <li>Number of Environmental factors: Unknown</li>
-  <li>Number of experimentally supported LncRNAs-EFs: Unknown</li>
-  <li>Number of predicted LncRNAs-EFs: Unknown</li>
+  <li>Number of LncRNAs: ${(empty lnc)?"Unknown":lnc }</li>
+  <li>Number of Environmental factors: ${(empty ef)?"Unknown":ef }</li>
+  <li>Number of experimentally supported LncRNAs-EFs: ${(empty predict)?"Unknown":predict }</li>
+  <li>Number of predicted LncRNAs-EFs: ${(empty experiment)?"Unknown":experiment }</li>
 </ul>
 <h2>Reference</h2>
 <p>Jie Sun1, †, Yuanpei Cai2, †, Zhenzhen Wang1, jiahui Zhang1, Hongbo Shi1, Dapeng Hao1,* and Meng Zhou1,*, (2013)<br />

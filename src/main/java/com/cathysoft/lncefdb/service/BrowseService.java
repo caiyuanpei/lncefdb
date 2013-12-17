@@ -11,6 +11,7 @@ import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class BrowseService {
@@ -18,18 +19,20 @@ public class BrowseService {
 	@Autowired
 	private DataSource dataSource;
 	
+	@Transactional
 	public JSONArray fetchData(String id, String grp) {
 		JdbcTemplate tpl = new JdbcTemplate(dataSource);
 		
 		List<Map<String, Object>> list = null;
 		if(grp.equals("_lnc"))
-			list = tpl.queryForList("SELECT * FROM fdr WHERE lnc=?", id);
+			list = tpl.queryForList("SELECT lnc, ef, fdr, status FROM fdr WHERE lnc=?", id);
 		else
-			list = tpl.queryForList("SELECT * FROM fdr WHERE ef=?", id);
+			list = tpl.queryForList("SELECT lnc, ef, fdr, status FROM fdr WHERE ef=?", id);
 		
 		return JSONArray.fromObject(list);
 	}
 	
+	@Transactional
 	public JSONArray fetchChildren(String pid, String grp) {
 		JSONArray arr = new JSONArray();
 		
@@ -46,6 +49,7 @@ public class BrowseService {
 		return arr;
 	}
 	
+	@Transactional
 	private void buildData(String pid, String grp, JSONArray arr) {
 		JdbcTemplate tpl = new JdbcTemplate(dataSource);
 		List<Map<String, Object>> ls = null;
@@ -68,6 +72,7 @@ public class BrowseService {
 		}
 	}
 
+	@Transactional
 	private void buildAlphaForInc(JSONArray arr) {
 		JdbcTemplate tpl = new JdbcTemplate(dataSource);
 		List<Map<String, Object>> ls = tpl.queryForList("SELECT DISTINCT LEFT(UPPER(lnc), 1) AS st FROM fdr");
@@ -86,6 +91,7 @@ public class BrowseService {
 		}
 	}
 
+	@Transactional
 	private void buildAlphaForEf(JSONArray arr) {
 		JdbcTemplate tpl = new JdbcTemplate(dataSource);
 		List<Map<String, Object>> ls = tpl.queryForList("SELECT DISTINCT LEFT(UPPER(ef), 1) AS st FROM fdr");
@@ -104,6 +110,7 @@ public class BrowseService {
 		}
 	}
 	
+	@Transactional
 	private void buildRoot(JSONArray arr) {
 		JSONObject obj = new JSONObject();
 		obj.accumulate("data", "IncRNA");

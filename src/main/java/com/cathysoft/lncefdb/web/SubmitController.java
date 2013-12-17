@@ -29,7 +29,8 @@ public class SubmitController {
 	public String doSubmit(
 			@RequestParam String lnc, 
 			@RequestParam String ef, 
-			@RequestParam String status, 
+			@RequestParam String status,
+			@RequestParam String pubmedid,
 			@RequestParam String email, 
 			@RequestParam String descrip,
 			RedirectAttributes attr) {
@@ -45,7 +46,7 @@ public class SubmitController {
 		}
 		/* update end */
 		
-		service.submitTerm(lnc, ef, status, email, descrip);
+		service.submitTerm(lnc, ef, status, pubmedid, email, descrip);
 		attr.addFlashAttribute("substatus", "Submit Success.");
 		
 		return "redirect:/submit";

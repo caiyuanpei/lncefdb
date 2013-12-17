@@ -68,15 +68,15 @@ jQuery("#table").jqGrid({
 	datatype: "json",
    	colNames:['Lnc RNA','Environmental factors', 'P value (FDR correction)', 'Status'],
    	colModel:[
-   		{name:'LNC',index:'id', width:150},
-   		{name:'EF',index:'ef', width:150},
-   		{name:'FDR',index:'fdr desc', width:150, align:"right"},
-   		{name:'STATUS',index:'amount', width:130, align:"right"}	
+   		{name:'lnc',index:'id', width:150},
+   		{name:'ef',index:'ef', width:150},
+   		{name:'fdr',index:'fdr desc', width:150, align:"right"},
+   		{name:'status',index:'amount', width:130, align:"right"}	
    	],
    	height: 500,
    	pager: "#ptable",
-   	rowNum: 300,
-	rowList: [300],
+   	rowNum: 0,
+	rowList: [0],
     viewrecords: true,
     sortorder: "desc",
     caption:"Relations"
