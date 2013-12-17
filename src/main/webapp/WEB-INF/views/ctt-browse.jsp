@@ -15,6 +15,7 @@
 <h1>Browse</h1>
 <spring:url value="/search" var="URL_SEARCH" />
 <p>Browse the relationships by select node on tree. If you want change the status of relationship, please use <a href="${URL_SEARCH }">search</a> function.</p>
+<p>Last Item Submit Date: ${lastSubmitTime }</p>
 <table style="border-collapse: collapse; border: 1px solid #ccc; width: 100%; height: 40em; table-layout: fixed;">
   <tr>
     <td style="border: 1px solid #ccc; width: 30%;">

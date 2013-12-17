@@ -1,5 +1,8 @@
 package com.cathysoft.lncefdb.service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.sql.DataSource;
 
 import org.slf4j.Logger;
@@ -58,5 +61,15 @@ public class StatisticsService {
 		
 		logger.info("Statisic Experiment Fdrs ("+cn+" items).");
 		return cn;
+	}
+	
+	@Transactional
+	@Cacheable(cacheName="statistics")
+	public String statisticsLastSubmitTime() {
+		JdbcTemplate tpl = new JdbcTemplate(dataSource);
+		Date date = tpl.queryForObject("SELECT MAX(submitTime) FROM fdr", Date.class);
+		
+		logger.info("Statisic Last Submit Time = ("+ date +").");
+		return new SimpleDateFormat("yyyy.MM.dd").format(date);
 	}
 }
