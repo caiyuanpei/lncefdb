@@ -9,6 +9,13 @@
 	<cache name="statistics" eternal="false" maxElementsInMemory="10"
 		overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
 		timeToLiveSeconds="300" memoryStoreEvictionPolicy="LRU" />
+	
+	<cache name="lncsByTerm" eternal="false" maxElementsInMemory="100"
+		overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
+		timeToLiveSeconds="300" memoryStoreEvictionPolicy="LRU" />
 
+	<cache name="efsByTerm" eternal="false" maxElementsInMemory="100"
+		overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
+		timeToLiveSeconds="300" memoryStoreEvictionPolicy="LRU" />
 
 </ehcache>
