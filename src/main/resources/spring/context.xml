@@ -34,8 +34,8 @@
 	<bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://127.0.0.1:3306/lncefdb"/>
-        <property name="username" value="root" />
-        <property name="password" value="root" />
+        <property name="username" value="lncefdb" />
+        <property name="password" value="lncefdb" />
     </bean>
 	
 	<ehcache:annotation-driven cache-manager="ehCacheManager" />
