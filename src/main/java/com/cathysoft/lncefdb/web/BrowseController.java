@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cathysoft.lncefdb.service.BrowseService;
+import com.cathysoft.lncefdb.service.DateFormatService;
 import com.cathysoft.lncefdb.service.StatisticsService;
 
 @Controller
@@ -23,11 +24,14 @@ public class BrowseController {
 	@Autowired
 	private StatisticsService service2;
 	
+	@Autowired
+	private DateFormatService service3;
+	
 	@RequestMapping(
 			value="browse",
 			method=RequestMethod.GET)
 	public String showBrowsePage(Model model) {
-		model.addAttribute("lastSubmitTime", service2.statisticsLastSubmitTime());
+		model.addAttribute("lastSubmitTime", service3.format(service2.statisticsLastSubmitTime()));
 		return "lncef.browse";
 	}
 	

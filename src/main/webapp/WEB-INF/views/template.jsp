@@ -28,7 +28,7 @@
         <h3>Latest News</h3>
         <h4>Website Launched</h4>
         <h5>December 20th, 2013</h5>
-        <p>First Version Of Our Site has been launched. It provided browse, search, submit and download functions.</p>
+        <p>First version of our site has been launched. It provided browse, search, submit and download functions.</p>
         <p></p>
         <h3>Useful Links</h3>
         <ul>
@@ -40,7 +40,7 @@
           <li><a href="http://www.drugbank.ca/">DrugBank</a></li>
         </ul>
         <h3>Contact US</h3>
-        <p>biafomeng@hotmai.com</p>
+        <p>biofomeng@hotmail.com</p>
       </div>
       <div id="content"><tiles:insertAttribute name="content" /></div>
     </div>

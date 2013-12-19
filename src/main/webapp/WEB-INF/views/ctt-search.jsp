@@ -79,9 +79,9 @@ $(function(){
 
 <c:if test="${not showresult }">
 <div style="margin-top: 2em;">
-<p> In the "Search" result, each entry has three items.</p>
-<p style="text-indent:20px;">(1) Lnc RNA</p>
-<p style="text-indent:20px;">(2) Environmental factors</p>
+<p>In the "Search" result, each entry has three items.</p>
+<p style="text-indent:20px;">(1) LncRNA name</p>
+<p style="text-indent:20px;">(2) Environmental factors name</p>
 <p style="text-indent:20px;">(3) Status, experiment or predict.</p>
 </div>
 </c:if>

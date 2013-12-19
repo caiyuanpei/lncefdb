@@ -4,7 +4,7 @@
 <!-- insert the page content here -->
 <h1>Submit</h1>
 <h2>${substatus }</h2>
-<p>LncEnvironmentDB provides submission page that allows other researchers to submit predict(or experiment) LncRNA - Environmental factor relationships that are not documented. Once approved by the submission review committee, the submitted record will be included in the database, and made available to the public in the coming release. LncEnvironmentDB will be updated bimonthly.</p>
+<p>LncEnvironmentDB provides submission page that allows other researchers to submit experimentally supported (or predicted) relationships between lncRNAs and environmental factors.</p>
 <spring:url value="/submit" var="URL_DOSUBMIT" />
 <form id="form1" action="${URL_DOSUBMIT }" method="post">
   <div class="form_settings">
